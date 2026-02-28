@@ -121,3 +121,45 @@ Use this format for every decision entry:
 - **Tradeoffs:** Slower AOV expansion initially versus launching large kits immediately.
 - **Revisit trigger:** Revisit after first conversion/cohort data supports larger bundle demand.
 
+- **Date:** 2026-02-28
+- **Decision:** Lock launch pricing at AUD $12 (Single), $29 (Trio), and $49 (Weekend Kit placeholder).
+- **Why:** Balances premium signaling with low-friction purchase thresholds for risk-sensitive nursery buyers.
+- **Evidence:** Topic 06 pricing output recommends this ladder as the strongest conversion/AOV compromise.
+- **Tradeoffs:** Less near-term flexibility while validating response bands.
+- **Revisit trigger:** Revisit after first 10–20 purchases and initial CPA/CVR data.
+
+- **Date:** 2026-02-28
+- **Decision:** Make Trio the default monetization path; Singles remain secondary starter option.
+- **Why:** Cohesive solution framing reduces decision friction and supports healthier AOV for paid social.
+- **Evidence:** Topic 06 identifies Trio-first framing as more effective for nursery buyer psychology.
+- **Tradeoffs:** Some highly price-sensitive buyers may need extra reassurance before purchasing.
+- **Revisit trigger:** Revisit if Trio landing underperforms Single landing in controlled split tests.
+
+- **Date:** 2026-02-28
+- **Decision:** Use clean anchor copy (“Save $7 vs singles”) and avoid aggressive crossed-out launch pricing.
+- **Why:** Early trust is fragile; transparent anchor math outperforms gimmicky discount optics for new stores.
+- **Evidence:** Topic 06 flags heavy discount presentation as a trust-killer at launch.
+- **Tradeoffs:** Slightly lower urgency versus hard-promo tactics.
+- **Revisit trigger:** Revisit if validated urgency experiments show significantly better net profitability.
+
+- **Date:** 2026-02-28
+- **Decision:** Launch creative system will use exactly three angles: Transformation, Print-confidence, and Instant gift convenience.
+- **Why:** Balances emotional outcome proof with trust-building for zero-review launch conditions.
+- **Evidence:** Topic 07 output prioritizes these angles as highest-leverage and lowest-trust-risk combination.
+- **Tradeoffs:** Narrower angle diversity in first batch.
+- **Revisit trigger:** Revisit after first creative cycle if one angle consistently underperforms.
+
+- **Date:** 2026-02-28
+- **Decision:** Standardize launch ad format to 9:16, ~14s, with finished-wall outcome shown in first second.
+- **Why:** Early thumb-stop and immediate outcome clarity are essential for cold-feed performance.
+- **Evidence:** Topic 07 prescribes first-second outcome framing with concise sequence and confidence cues.
+- **Tradeoffs:** Less experimentation with long-form storytelling at launch.
+- **Revisit trigger:** Revisit after stable CTR and hold-rate data from first two testing rounds.
+
+- **Date:** 2026-02-28
+- **Decision:** Enforce safe-zone text placement and digital-only disclosure in first 2–3 seconds across all ad variants.
+- **Why:** Prevents UI overlap loss and reduces digital-format confusion that harms trust and conversion.
+- **Evidence:** Topic 07 and prior trust findings highlight overlay issues and format confusion as conversion killers.
+- **Tradeoffs:** Tighter layout constraints during creative production.
+- **Revisit trigger:** Revisit only if platform UI guidance changes or readability tests justify adjustments.
+

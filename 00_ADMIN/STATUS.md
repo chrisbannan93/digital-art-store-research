@@ -6,8 +6,8 @@
 - [x] 03 — Visual Product-Market Fit
 - [x] 04 — Mockups and Perceived Quality
 - [x] 05 — Offer Design
-- [ ] 06 — Pricing Psychology
-- [ ] 07 — Ad Creative Strategy
+- [x] 06 — Pricing Psychology
+- [x] 07 — Ad Creative Strategy
 - [ ] 08 — Creative Testing Framework
 - [ ] 09 — CRO Product Pages
 - [ ] 10 — Trust and Legitimacy
@@ -18,7 +18,7 @@
 - [ ] 15 — AI Shopping Discovery
 
 ## Next Up
-- **Current topic to run:** 06_pricing_psychology
+- **Current topic to run:** 08_creative_testing_framework
 - **Inputs needed before run:** Choose one provisional niche direction from Topic 01, define buyer JTBD sentence, and keep bundle-first hypothesis explicit.
 - **Owner:**
 - **Target completion date:**

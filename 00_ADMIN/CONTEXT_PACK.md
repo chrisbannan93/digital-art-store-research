@@ -55,23 +55,59 @@ Turn blank walls into cohesive, personality-led spaces quickly with instant-down
 - **Refund stance:** no routine returns for instant downloads; if genuine issue is unresolved, refund is allowed.
 - **Re-download support:** resend links and assist access issues via support flow.
 
-## Pricing Hypothesis
-TBD (suggested test range: $9–$29 singles, $39–$79 bundles; bundle-first approach preferred)
+## Locked Price Points (AUD)
+- **Single:** $12
+- **Trio Kit:** $29
+- **Weekend Kit (6–9 prints):** $49 (post-validation tier)
+
+## Bundle Emphasis Rule (Single vs Trio)
+- **Default offer path:** Trio Kit (“Most Popular / Best Value”) across homepage, collection ordering, and primary ad landing.
+- **Single role:** Starter/style-test option for hesitant buyers; keep available but not default decision frame.
+- **Expansion rule:** Weekend Kit activates after Singles/Trio show stable conversion and support load remains manageable.
+
+## Anchoring Language
+- Use clear value anchor: **“Save $7 vs buying singles.”**
+- Pair price anchors with confidence anchors: **“Print confidence included.”**
+- Preferred tier badges: **Starter / Most Popular / Complete the Wall**.
+- Avoid aggressive crossed-out pricing or perpetual discount optics in early launch phase.
 
 ## Primary Ad Format
 Before/After 9:16 MP4 slideshow (tentative)
 
-## Top Hooks (placeholder lines)
-1. Turn a blank wall into a styled room in minutes.
-2. Printable wall art that looks premium without premium pricing.
-3. Instant-download art sets made for modern apartments.
-4. Before/after wall refresh without waiting for shipping.
-5. Curated matching prints that remove decor decision fatigue.
-6. Decor upgrade tonight: download, print, frame.
-7. Affordable wall art bundles with designer-style cohesion.
-8. Renter-friendly art updates that still feel high-end.
-9. Style your home office with cohesive printable sets.
-10. Transform your space this weekend with ready-to-print art.
+## Chosen Creative Angles
+- **Finished-wall transformation:** show blank-to-finished nursery relief immediately.
+- **Print-confidence:** reduce no-regret printing anxiety via clear visual proof and simple steps.
+- **Instant gift / last-minute convenience:** emphasize speed and tasteful outcome with digital clarity.
+
+## Top Hooks (launch library)
+1. Nursery wall: fixed.
+2. From blank → calm.
+3. Make it feel finished.
+4. The “something’s missing” fix.
+5. A calm nursery in minutes.
+6. Print it with confidence.
+7. Try before you print.
+8. No guessing sizes.
+9. 5 ratios included.
+10. Print test page inside.
+11. A matching trio kit.
+12. Coordinated. Done.
+13. One download. Full set.
+14. Instant nursery refresh.
+15. A gift you can send today.
+
+## Ad Structure Rules
+- **Core format:** 9:16 MP4 slideshow, 12–15s (standardize at ~14s).
+- **Frame order:** Hook+After → Before → After reaffirmed → What’s included → Print-confidence → 3-step flow → CTA.
+- **Readability rule:** 3–5 words in hook frames; large text; muted-friendly communication.
+- **Disclosure rule:** “Instant download / digital-only” must appear in first 2–3 seconds.
+- **Safe-zone rule:** keep critical text/CTA clear of platform UI overlay areas.
+
+## Platform Usage Rules
+- **TikTok:** slightly faster cuts and motion; prioritize Transformation + Gift angles early.
+- **Meta Reels/Stories/Feed:** slightly calmer pacing; prioritize Print-confidence + Transformation.
+- **Reuse rule:** build one master timeline, then export platform-specific pacing variants.
+- **Testing rule:** first batch = 4 creatives (2 transformation, 1 print-confidence, 1 gift) with one-variable changes only.
 
 ## Key Objections + Answers (placeholder)
 - **Objection:** “Will this actually print clearly?”  
