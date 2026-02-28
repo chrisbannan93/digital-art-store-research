@@ -1,0 +1,11 @@
+{
+  "_comment": "Schema stub. Implement only locked fields from BUILD_SPEC sections 2, 3, 6, and 8.",
+  "todo": {
+    "offer_types": "Single, Trio, Weekend_placeholder",
+    "pricing_aud": "single_12, trio_29, weekend_49_placeholder",
+    "deliverables": "zip_package, ratio_files_per_print=5, print_me_first_pdf",
+    "copy_constants": "canonical_digital_only_line, trio_anchor_line",
+    "license": "personal_use_only",
+    "support_guarantee": "troubleshoot_resolve_refund_if_unresolved"
+  }
+}

@@ -163,3 +163,66 @@ Use this format for every decision entry:
 - **Tradeoffs:** Tighter layout constraints during creative production.
 - **Revisit trigger:** Revisit only if platform UI guidance changes or readability tests justify adjustments.
 
+- **Date:** 2026-02-28
+- **Decision:** Adopt a strict two-gate testing model (Gate 1 CTR/CPC, Gate 2 CVR/CPA) for all cold paid-social creative tests.
+- **Why:** Prevents killing strong concepts too early or scaling click-only creatives that do not convert.
+- **Evidence:** DR-08 framework defines this as fastest reliable loop under low-volume launch conditions.
+- **Tradeoffs:** Slightly slower emotional decision-making in exchange for cleaner signal quality.
+- **Revisit trigger:** Revisit if account volume grows enough to support tighter/shorter decision windows.
+
+- **Date:** 2026-02-28
+- **Decision:** Use ABO/ad-group budget parity with 2 creatives per angle in Sprint 1 tests.
+- **Why:** Ensures angle-level fairness and reduces one-creative luck bias.
+- **Evidence:** DR-08 specifies equal-spend structure as cleanest way to compare angles.
+- **Tradeoffs:** Less algorithmic flexibility during initial learning phase.
+- **Revisit trigger:** Revisit after one angle is validated and scaling phase begins.
+
+- **Date:** 2026-02-28
+- **Decision:** Anchor CPA targets to Trio price: tCPA = 0.7P, maxCPA = 1.0P, stop if >1.3P after minimum data.
+- **Why:** Keeps performance decisions tied to business economics rather than vanity metrics.
+- **Evidence:** DR-08 provides explicit economic guardrails using trio price as anchor.
+- **Tradeoffs:** Tight constraints may pause spend quickly on volatile low-budget days.
+- **Revisit trigger:** Revisit after stable CVR and AOV improvements are demonstrated.
+
+- **Date:** 2026-02-28
+- **Decision:** PDP must follow a fixed print-confidence funnel order (outcome -> clarity -> confidence -> safety -> set choice -> CTA).
+- **Why:** Digital-product anxiety is the core conversion blocker for cold nursery traffic.
+- **Evidence:** DR-09 identifies sequence-based fear removal as primary CRO mechanism.
+- **Tradeoffs:** Less freedom for creative storytelling on PDP layout.
+- **Revisit trigger:** Revisit after meaningful review/UGC volume reduces trust burden.
+
+- **Date:** 2026-02-28
+- **Decision:** Trio is explicitly labeled “Most Popular / Best Value” in set-choice block; Single remains available as Starter.
+- **Why:** Improves choice clarity and supports AOV without removing low-friction entry path.
+- **Evidence:** DR-09 recommends dual-card architecture with Trio default emphasis.
+- **Tradeoffs:** Requires clean value messaging to avoid Single cannibalization confusion.
+- **Revisit trigger:** Revisit if Trio share underperforms despite stable traffic and pricing.
+
+- **Date:** 2026-02-28
+- **Decision:** Launch CRO program is capped at three A/B tests (hook framing, Trio highlight, PRINT_ME_FIRST placement).
+- **Why:** Prevents over-testing noise and keeps learning loops interpretable at low volume.
+- **Evidence:** DR-09 specifies these as highest-leverage early PDP experiments.
+- **Tradeoffs:** Slower exploration of secondary UX hypotheses.
+- **Revisit trigger:** Revisit after baseline conversion stabilizes and traffic volume increases.
+
+- **Date:** 2026-02-28
+- **Decision:** Trust at launch will prioritize process proof over review volume (manifest, PRINT_ME_FIRST, print-path clarity, support SLA).
+- **Why:** Digital nursery buyers are regret- and usability-sensitive before they are review-sensitive.
+- **Evidence:** DR-10 identifies clarity/deliverability/support as primary trust drivers in zero-review conditions.
+- **Tradeoffs:** More upfront operational documentation and support setup work.
+- **Revisit trigger:** Revisit after meaningful review volume materially changes conversion behavior.
+
+- **Date:** 2026-02-28
+- **Decision:** Enforce canonical digital-delivery language across funnel: "Digital download only. No physical item is shipped."
+- **Why:** Reduces scam suspicion and buyer confusion at key decision moments.
+- **Evidence:** DR-10 flags inconsistent digital-only messaging as a critical trust failure point.
+- **Tradeoffs:** Requires strict copy QA across ads, PDP, cart, checkout, and emails.
+- **Revisit trigger:** Revisit only if delivery model changes to include physical variants by default.
+
+- **Date:** 2026-02-28
+- **Decision:** Policy pages must be conversion-supportive (human summary first, then details) and support-first guarantee is positioned near CTA.
+- **Why:** Legal-first policy framing increases anxiety; clarity-first framing improves perceived safety and action confidence.
+- **Evidence:** DR-10 policy-positioning guidance prioritizes outcome reassurance over legal intimidation.
+- **Tradeoffs:** Ongoing maintenance needed to keep summaries aligned with full policy text.
+- **Revisit trigger:** Revisit if legal/compliance requirements force stricter front-loaded disclosures.
+

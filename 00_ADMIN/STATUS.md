@@ -1,31 +1,35 @@
 # Research OS Status
 
-## Topic Checklist (01–15)
-- [x] 01 — Audience Psychology
-- [ ] 02 — Niche Positioning
-- [x] 03 — Visual Product-Market Fit
-- [x] 04 — Mockups and Perceived Quality
-- [x] 05 — Offer Design
-- [x] 06 — Pricing Psychology
-- [x] 07 — Ad Creative Strategy
-- [ ] 08 — Creative Testing Framework
-- [ ] 09 — CRO Product Pages
-- [ ] 10 — Trust and Legitimacy
-- [ ] 11 — Legal and Licensing
-- [ ] 12 — Ops and Automation
-- [ ] 13 — Metrics That Matter
-- [ ] 14 — Execution Discipline
-- [ ] 15 — AI Shopping Discovery
+## Project Phase
+- **Current phase:** BUILD_READY
+- **Research mode:** STOPPED
+
+## Decision Checklist (DR-01 to DR-10, COMPLETE)
+- [x] DR-01 — Bundle-first merchandising
+- [x] DR-02 — Print-confidence system required
+- [x] DR-03 — Platform-specific creative framing
+- [x] DR-04 — Mockup realism and quality standards
+- [x] DR-05 — Offer architecture and anti-commoditization guardrails
+- [x] DR-06 — Pricing lock and value framing
+- [x] DR-07 — Ad creative launch constraints
+- [x] DR-08 — Two-gate testing and CPA guardrails
+- [x] DR-09 — PDP conversion structure and launch A/B cap
+- [x] DR-10 — Trust, policy posture, and digital-only language lock
+
+## Build Handoff Status
+- **Build authority:** `00_ADMIN/BUILD_SPEC.md`
+- **Implementation stubs prepared:** `03_BUILD/*`
+- **Research mode directive:** No additional topic runs required before v1 build execution.
 
 ## Next Up
-- **Current topic to run:** 08_creative_testing_framework
-- **Inputs needed before run:** Choose one provisional niche direction from Topic 01, define buyer JTBD sentence, and keep bundle-first hypothesis explicit.
-- **Owner:**
-- **Target completion date:**
+- Execute v1 implementation from BUILD_SPEC:
+  1. PDP structure and copy modules
+  2. Product schema wiring
+  3. Gallery asset production
+  4. Policy pages and guarantee language
+  5. SKU packaging and QA
 
 ## Stop Conditions
-- Stop if three consecutive topics fail to produce actionable decisions.
-- Stop if context pack remains unchanged after two full topic runs.
-- Stop if economics do not work after testing assumptions (e.g., CPA too high for target AOV and margin).
-- Stop if legal/licensing constraints invalidate the current offer model.
-- Stop and revisit strategy if team cannot execute next actions within planned cadence.
+- Stop if implementation deviates from locked BUILD_SPEC constraints.
+- Stop if deliverables cannot meet print-confidence requirements (`PRINT_ME_FIRST`, ratio coverage, manifest clarity).
+- Stop and revisit strategy if unit economics fail under locked CPA guardrails after minimum data thresholds.
