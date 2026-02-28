@@ -1,0 +1,82 @@
+{% liquid
+  assign offer_mode = section.settings.offer_mode
+  if offer_mode == 'auto'
+    if product.tags contains 'trio'
+      assign offer_mode = 'trio'
+    else
+      assign offer_mode = 'single'
+    endif
+  endif
+  assign display_for = section.settings.display_for
+  assign should_render = false
+  if display_for == 'all' or display_for == offer_mode
+    assign should_render = true
+  endif
+%}
+
+{% if should_render %}
+<section class="pdp-gallery" data-offer-mode="{{ offer_mode }}">
+  {% if offer_mode == 'single' %}
+    {% for block in section.blocks %}
+      {% if block.type == 'single_image' %}
+        <figure {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            {{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy' }}
+          {% endif %}
+          <figcaption>{{ block.settings.caption_intent }} — {{ block.settings.anxiety_resolved }}</figcaption>
+        </figure>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% for block in section.blocks %}
+      {% if block.type == 'trio_image' %}
+        <figure {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            {{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy' }}
+          {% endif %}
+          <figcaption>{{ block.settings.caption_intent }} — {{ block.settings.anxiety_resolved }}</figcaption>
+        </figure>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "PDP Gallery",
+  "settings": [
+    { "type": "select", "id": "offer_mode", "label": "Offer mode", "default": "auto", "options": [
+      { "value": "auto", "label": "Auto" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "select", "id": "display_for", "label": "Display for", "default": "all", "options": [
+      { "value": "all", "label": "All" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]}
+  ],
+  "blocks": [
+    {
+      "type": "single_image",
+      "name": "Single gallery image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "caption_intent", "label": "Caption intent", "default": "{{SINGLE_IMAGE_CAPTION_INTENT}}" },
+        { "type": "text", "id": "anxiety_resolved", "label": "Anxiety resolved", "default": "{{SINGLE_IMAGE_ANXIETY}}" }
+      ]
+    },
+    {
+      "type": "trio_image",
+      "name": "Trio gallery image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "caption_intent", "label": "Caption intent", "default": "{{TRIO_IMAGE_CAPTION_INTENT}}" },
+        { "type": "text", "id": "anxiety_resolved", "label": "Anxiety resolved", "default": "{{TRIO_IMAGE_ANXIETY}}" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "PDP Gallery" }]
+}
+{% endschema %}

@@ -1,0 +1,88 @@
+{% liquid
+  assign offer_mode = section.settings.offer_mode
+  if offer_mode == 'auto'
+    if product.tags contains 'trio'
+      assign offer_mode = 'trio'
+    else
+      assign offer_mode = 'single'
+    endif
+  endif
+  assign display_for = section.settings.display_for
+  assign should_render = false
+  if display_for == 'all' or display_for == offer_mode
+    assign should_render = true
+  endif
+%}
+
+{% if should_render %}
+<section class="pdp-whats-included" data-offer-mode="{{ offer_mode }}">
+  <h2>{{ section.settings.heading }}</h2>
+
+  {% if offer_mode == 'trio' %}
+    <ul>
+      {% for block in section.blocks %}
+        {% if block.type == 'trio_item' %}
+          <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% else %}
+    <ul>
+      {% for block in section.blocks %}
+        {% if block.type == 'single_item' %}
+          <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <h3>{{ section.settings.manifest_heading }}</h3>
+  <ul>
+    <li>{{ section.settings.manifest_zip }}</li>
+    <li>{{ section.settings.manifest_ratios }}</li>
+    <li>{{ section.settings.manifest_print_me_first }}</li>
+    <li>{{ section.settings.ratio_list }}</li>
+  </ul>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "PDP What's Included",
+  "settings": [
+    { "type": "select", "id": "offer_mode", "label": "Offer mode", "default": "auto", "options": [
+      { "value": "auto", "label": "Auto" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "select", "id": "display_for", "label": "Display for", "default": "all", "options": [
+      { "value": "all", "label": "All" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "text", "id": "heading", "label": "Heading", "default": "What you get" },
+    { "type": "text", "id": "manifest_heading", "label": "Manifest heading", "default": "Full what's included manifest" },
+    { "type": "text", "id": "manifest_zip", "label": "Manifest ZIP line", "default": "1 ZIP package" },
+    { "type": "text", "id": "manifest_ratios", "label": "Manifest ratios line", "default": "5 ratio files per print asset" },
+    { "type": "text", "id": "manifest_print_me_first", "label": "Manifest PRINT_ME_FIRST line", "default": "PRINT_ME_FIRST.pdf" },
+    { "type": "text", "id": "ratio_list", "label": "Ratio list", "default": "2:3, 3:4, 4:5, 11:14, ISO (A-series)" }
+  ],
+  "blocks": [
+    {
+      "type": "single_item",
+      "name": "Single item",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "{{INCLUDED_FILES_SINGLE}}" }
+      ]
+    },
+    {
+      "type": "trio_item",
+      "name": "Trio item",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "{{INCLUDED_FILES_TRIO}}" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "PDP What's Included" }]
+}
+{% endschema %}

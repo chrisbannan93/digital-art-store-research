@@ -1,0 +1,135 @@
+{% liquid
+  assign offer_mode = section.settings.offer_mode
+  if offer_mode == 'auto'
+    if product.tags contains 'trio'
+      assign offer_mode = 'trio'
+    elsif product.tags contains 'single'
+      assign offer_mode = 'single'
+    else
+      assign offer_mode = 'both'
+    endif
+  endif
+  assign display_for = section.settings.display_for
+  assign should_render = false
+  if display_for == 'all' or display_for == offer_mode or offer_mode == 'both'
+    assign should_render = true
+  endif
+%}
+
+{% if should_render %}
+<section class="pdp-hero-offer" data-offer-mode="{{ offer_mode }}">
+  <h1>{{ section.settings.title | default: product.title }}</h1>
+  <p>{{ section.settings.format_clarity }}</p>
+  <p>{{ section.settings.tier_label }}</p>
+
+  <ul>
+    <li>{{ section.settings.badge_1 }}</li>
+    <li>{{ section.settings.badge_2 }}</li>
+    <li>{{ section.settings.badge_3 }}</li>
+    <li>{{ section.settings.badge_4 }}</li>
+  </ul>
+
+  <p>{{ section.settings.hook_text }}</p>
+
+  <div>
+    <strong>{{ section.settings.price_label }}</strong>
+    <span>{{ section.settings.price_text }}</span>
+  </div>
+  <p>{{ section.settings.digital_delivery_line }}</p>
+
+  {% if offer_mode == 'both' %}
+    <fieldset>
+      <legend>{{ section.settings.choose_set_label }}</legend>
+      <label>
+        <input type="radio" name="pdp-set" value="single" checked>
+        <span>{{ section.settings.single_option_title }}</span>
+        <small>{{ section.settings.single_option_desc }}</small>
+      </label>
+      <label>
+        <input type="radio" name="pdp-set" value="trio">
+        <span>{{ section.settings.trio_option_title }}</span>
+        <small>{{ section.settings.trio_option_desc }}</small>
+        <small>{{ section.settings.trio_anchor_line }}</small>
+      </label>
+    </fieldset>
+  {% elsif offer_mode == 'single' %}
+    <p>{{ section.settings.single_option_title }} — {{ section.settings.single_option_desc }}</p>
+  {% elsif offer_mode == 'trio' %}
+    <p>{{ section.settings.trio_option_title }} — {{ section.settings.trio_option_desc }}</p>
+    <p>{{ section.settings.trio_anchor_line }}</p>
+  {% endif %}
+
+  {% form 'product', product %}
+    <button type="submit">{{ section.settings.primary_cta_label }}</button>
+  {% endform %}
+  <p>{{ section.settings.instant_delivery_line }}</p>
+
+  <ul>
+    {% for block in section.blocks %}
+      {% if block.type == 'mini_bullet' %}
+        <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <div>
+    <p>{{ section.settings.trust_print_first }}</p>
+    <p>{{ section.settings.trust_support_sla }}</p>
+    <p>{{ section.settings.trust_support_first }}</p>
+    <p>{{ section.settings.digital_delivery_line }}</p>
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "PDP Hero Offer",
+  "settings": [
+    { "type": "select", "id": "offer_mode", "label": "Offer mode", "default": "auto", "options": [
+      { "value": "auto", "label": "Auto" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" },
+      { "value": "both", "label": "Both" }
+    ]},
+    { "type": "select", "id": "display_for", "label": "Display for", "default": "all", "options": [
+      { "value": "all", "label": "All" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" },
+      { "value": "both", "label": "Both" }
+    ]},
+    { "type": "text", "id": "title", "label": "Title", "default": "{{STYLE}} Nursery Print — {{SUBJECT}} (Printable Wall Art)" },
+    { "type": "text", "id": "format_clarity", "label": "Format clarity", "default": "Printable wall art • Digital files" },
+    { "type": "text", "id": "tier_label", "label": "Tier label", "default": "Starter" },
+    { "type": "text", "id": "badge_1", "label": "Badge 1", "default": "Instant Download" },
+    { "type": "text", "id": "badge_2", "label": "Badge 2", "default": "300 DPI" },
+    { "type": "text", "id": "badge_3", "label": "Badge 3", "default": "5 Ratios" },
+    { "type": "text", "id": "badge_4", "label": "Badge 4", "default": "Beginner-Friendly" },
+    { "type": "textarea", "id": "hook_text", "label": "Hook", "default": "Create a calm, cohesive nursery corner in minutes with {{STYLE_LOWER}} artwork designed to work beautifully in everyday family spaces. You’ll receive clear files, simple print guidance, and friendly support if you need a hand." },
+    { "type": "text", "id": "price_label", "label": "Price label", "default": "{{PRICE}}" },
+    { "type": "text", "id": "price_text", "label": "Price text", "default": "$12 AUD / $29 AUD" },
+    { "type": "text", "id": "digital_delivery_line", "label": "Digital delivery line", "default": "Digital download only. No physical item is shipped." },
+    { "type": "text", "id": "choose_set_label", "label": "Choose set label", "default": "Choose your set" },
+    { "type": "text", "id": "single_option_title", "label": "Single option title", "default": "Single (Starter)" },
+    { "type": "text", "id": "single_option_desc", "label": "Single option description", "default": "1 coordinated print" },
+    { "type": "text", "id": "trio_option_title", "label": "Trio option title", "default": "Trio Kit (Most Popular / Best Value)" },
+    { "type": "text", "id": "trio_option_desc", "label": "Trio option description", "default": "3 coordinated prints + layout suggestion" },
+    { "type": "text", "id": "trio_anchor_line", "label": "Trio anchor line", "default": "Save $7 vs buying singles" },
+    { "type": "text", "id": "primary_cta_label", "label": "Primary CTA label", "default": "Add to cart" },
+    { "type": "text", "id": "instant_delivery_line", "label": "Instant delivery line", "default": "Files available instantly after checkout." },
+    { "type": "text", "id": "trust_print_first", "label": "Trust: PRINT_ME_FIRST", "default": "PRINT_ME_FIRST.pdf included" },
+    { "type": "text", "id": "trust_support_sla", "label": "Trust: support SLA", "default": "Support replies within {{SUPPORT_SLA}}" },
+    { "type": "textarea", "id": "trust_support_first", "label": "Trust: support-first line", "default": "We help troubleshoot first, then resolve, then refund if unresolved within {{REFUND_WINDOW}}." }
+  ],
+  "blocks": [
+    {
+      "type": "mini_bullet",
+      "name": "Mini what-you-get bullet",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Bullet text", "default": "{{INCLUDED_FILES_SINGLE}}" }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [{ "name": "PDP Hero Offer" }]
+}
+{% endschema %}
