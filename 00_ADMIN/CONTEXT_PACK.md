@@ -6,40 +6,57 @@
 TBD (testing)
 
 ## Buyer
-- TBD
-- TBD
-- TBD
+- Job to be done (provisional): “Help me make my wall feel finished this weekend without overspending.”
+- Motivations observed: fast room transformation, identity expression, reduced decision fatigue.
+- Key anxiety cluster: print success confidence (sizes, colour, file access, framing fit).
 
 ## Promise
-TBD
+Turn blank walls into cohesive, personality-led spaces quickly with instant-download kits that are easy to print.
 
 ## Visual Rules
-- TBD
-- TBD
-- TBD
-- TBD
-- TBD
+- Prioritize finished-wall clarity in first image (believable above-crib/changing-table scale).
+- Keep nursery visuals calm and phone-legible: one dominant motif + generous negative space.
+- Restrict first 10 SKUs to 2–3 palette families (warm neutral, soft sage, terracotta accent).
+- Use cohesive set visuals (trio/grid) to signal bundle value instantly.
+- Put print-confidence cues (sizes/ratios/steps) in first 2–3 images and ad flow.
 
 ## Mockup Rules
-- TBD
-- TBD
-- TBD
-- TBD
-- TBD
+- Use soft natural lighting with subtle realistic frame shadows; avoid flat or harsh lighting.
+- Keep scale believable (above-crib/changing-table proportions and breathable spacing).
+- Maintain consistent frame family, wall tone, camera angle style, and editing profile.
+- Include explicit print-confidence cues (sizes/ratios + download→print→frame guidance).
+- Avoid uncanny AI-style interiors or over-stylized scenes in v1.
 
-## Offer Contents (default digital pack placeholders)
-- High-resolution JPG files (300 DPI) for print-ready output.
-- PDF print guide (paper, scale, framing, printer settings).
-- Ratio set placeholders:
+## Offer Contents
+- **Per SKU default:** 1 ZIP download containing 5 print-ready JPG files (300 DPI) + `PRINT_ME_FIRST.pdf`.
+- **Standard ratio pack:**
   - 2:3 ratio (e.g., 4x6, 8x12, 12x18, 16x24, 20x30)
   - 3:4 ratio (e.g., 6x8, 9x12, 12x16, 18x24)
   - 4:5 ratio (e.g., 8x10, 11x14, 16x20)
-  - 11:14 ratio (e.g., 11x14, 22x28)
+  - 11:14 ratio
   - ISO/A-series (A5/A4/A3/A2/A1)
-- ZIP package naming placeholder: `collection-name_artwork-name_ratio-pack_v1.zip`.
+- **Mandatory included file:** `PRINT_ME_FIRST.pdf` (frame-size mapping + print tips + digital/license reminders).
+- **ZIP naming standard (provisional):** `collection-artwork_skuType_ratioPack_v1.zip`.
+
+## Bundle Structure
+- **Single (launch core):** one hero print + full 5-ratio pack.
+- **Trio Kit (launch core):** 3 coordinated prints + layout suggestion visual.
+- **Weekend Kit (post-validation):** 6–9 prints + optional layout options.
+- **Launch ladder rule:** Singles + Trio first; expand to Weekend Kit only after conversion signal.
+
+## Licensing Stance
+- **Launch default:** Personal Use Only.
+- **Allowed:** print for own home and personal gifting.
+- **Not allowed:** resale, redistribution, file-sharing, or commercial product use.
+- **Placement rule:** license summary on product page + in `PRINT_ME_FIRST.pdf`.
+
+## Guarantees
+- **Support-first guarantee:** if buyer is unsure which file/size to use or printer rejects file, we help choose/send the correct version.
+- **Refund stance:** no routine returns for instant downloads; if genuine issue is unresolved, refund is allowed.
+- **Re-download support:** resend links and assist access issues via support flow.
 
 ## Pricing Hypothesis
-TBD (suggested test range: $9–$29 singles, $39–$79 bundles)
+TBD (suggested test range: $9–$29 singles, $39–$79 bundles; bundle-first approach preferred)
 
 ## Primary Ad Format
 Before/After 9:16 MP4 slideshow (tentative)
@@ -58,15 +75,15 @@ Before/After 9:16 MP4 slideshow (tentative)
 
 ## Key Objections + Answers (placeholder)
 - **Objection:** “Will this actually print clearly?”  
-  **Answer:** Placeholder — confirm 300 DPI guidance and print settings in product page copy.
+  **Answer:** Use 300 DPI files + simple print settings + troubleshooting guide.
 - **Objection:** “I don’t know which size to print.”  
-  **Answer:** Placeholder — include a simple size map and room-use recommendations.
+  **Answer:** Include a size map tied to common frame dimensions.
 - **Objection:** “Is this license personal or commercial?”  
-  **Answer:** Placeholder — add plain-language license summary above the add-to-cart button.
+  **Answer:** Show plain-language license summary before add-to-cart.
 - **Objection:** “Digital files feel less valuable than physical prints.”  
-  **Answer:** Placeholder — emphasize instant access, flexibility, and framing customization.
+  **Answer:** Emphasise instant access, low-risk experimentation, and room transformation outcome.
 - **Objection:** “What if the style doesn’t match my room?”  
-  **Answer:** Placeholder — provide mockups by room style and themed collections.
+  **Answer:** Show multiple room-context mockups and cohesive themed kits.
 
 ## Testing Plan (placeholder budget + kill rules)
 - **Starting budget:** TBD (suggested placeholder: $50–$100/day).
@@ -74,3 +91,39 @@ Before/After 9:16 MP4 slideshow (tentative)
 - **Kill rule 1:** Pause creatives below CTR target after minimum spend threshold is reached.
 - **Kill rule 2:** Pause ad sets where CPA exceeds allowable range versus AOV/margin.
 - **Scale trigger:** Increase spend only when CTR + CVR + CPA are stable for multiple days.
+- **Platform split (provisional):** TikTok transformation creatives + Meta proof/bundle creatives.
+
+## Chosen Visual Archetypes
+- **Soft Icon Trio (Sun / Moon / Cloud):** one large motif per print, high whitespace, calm nursery-safe read.
+- **Watercolor Woodland Neutrals:** single-subject portraits, muted earthy tones, restrained detail for mobile legibility.
+- **Terracotta Boho Minimal (No Faux-Foil):** modern warm palette, simple geometric/motif language, low-noise composition.
+
+## Do Not Do (first-drop constraints)
+- Do not ship faux-foil/metallic hero visuals that may not match printed output.
+- Do not ship text-heavy quote art in first drop (especially long-copy posters).
+- Do not publish intricate/high-noise artwork that loses clarity on mobile or print.
+- Do not use uncanny AI-looking interiors or explicit AI-art positioning in launch creatives.
+- Do not use IP-adjacent/fan-art themes or uncertain licensing sources.
+- Do not publish SKUs without print-confidence assets (ratio chart + download/print/frame panel).
+
+
+## Room Types (v1 focus)
+- Nursery (primary)
+- Kids bedroom (secondary)
+- Kids playroom (selective)
+- Avoid unrelated adult living rooms/offices/kitchens in early catalog
+
+## Minimum Mockup Set (per SKU)
+- Target **6 images** per product (minimum 5):
+  1. Hero in-room mockup
+  2. Lifestyle nursery shot
+  3. Bundle/grid overview
+  4. Size/ratio chart
+  5. Download → print → frame panel
+  6. What’s included/file breakdown
+
+## Tooling Decisions
+- **v1 stack:** Canva + Photopea + reusable nursery mockup templates.
+- **Asset rule:** Use curated high-resolution nursery backgrounds with consistent perspective.
+- **Delivery specs:** PDP images at high resolution (2000px+ long edge where possible), ad creatives in 9:16 (1080×1920 baseline).
+- **Scale plan:** Move to custom real-print photography after first validated winners.

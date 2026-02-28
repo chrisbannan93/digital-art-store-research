@@ -1,11 +1,11 @@
 # Research OS Status
 
 ## Topic Checklist (01–15)
-- [ ] 01 — Audience Psychology
+- [x] 01 — Audience Psychology
 - [ ] 02 — Niche Positioning
-- [ ] 03 — Visual Product-Market Fit
-- [ ] 04 — Mockups and Perceived Quality
-- [ ] 05 — Offer Design
+- [x] 03 — Visual Product-Market Fit
+- [x] 04 — Mockups and Perceived Quality
+- [x] 05 — Offer Design
 - [ ] 06 — Pricing Psychology
 - [ ] 07 — Ad Creative Strategy
 - [ ] 08 — Creative Testing Framework
@@ -18,8 +18,8 @@
 - [ ] 15 — AI Shopping Discovery
 
 ## Next Up
-- **Current topic to run:** 01_audience_psychology
-- **Inputs needed before run:** Clear starting niche hypothesis, rough buyer assumptions, baseline budget.
+- **Current topic to run:** 06_pricing_psychology
+- **Inputs needed before run:** Choose one provisional niche direction from Topic 01, define buyer JTBD sentence, and keep bundle-first hypothesis explicit.
 - **Owner:**
 - **Target completion date:**
 
