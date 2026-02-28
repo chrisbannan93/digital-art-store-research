@@ -127,3 +127,52 @@ Before/After 9:16 MP4 slideshow (tentative)
 - **Asset rule:** Use curated high-resolution nursery backgrounds with consistent perspective.
 - **Delivery specs:** PDP images at high resolution (2000px+ long edge where possible), ad creatives in 9:16 (1080×1920 baseline).
 - **Scale plan:** Move to custom real-print photography after first validated winners.
+
+## Niche Lock (Execution Guardrail)
+- **Current primary niche:** Nursery printable wall kits (calm, cohesive, confidence-led).
+- **Secondary niches (deferred):** Kids learning/playroom kits, broader home decor variants.
+- **Niche freeze rule:** No expansion beyond primary niche until first 10 SKUs are live and at least one offer/bundle shows repeatable conversion signal.
+
+## Pricing & Margin Guardrails
+- **Price architecture (working):** Single = entry tier, Trio = core value tier, Weekend Kit = expansion tier.
+- **Decision principle:** Do not add discounts/promotions that compress margin below sustainability threshold.
+- **Economics rule:** Pause or rework offers where CPA and support/refund burden indicate negative unit economics.
+- **AOV target direction:** Use curated bundles (Trio, then Weekend Kit) to improve blended AOV over single-only mix.
+
+## Creative Cadence (Paid Social)
+- **Weekly production baseline:** publish fresh creatives for both transformation and print-confidence angles.
+- **Format mix:** prioritize 9:16 short-form video + supporting static/carousel variants.
+- **Fatigue trigger:** refresh hooks/visual variants when CTR trends down and CPA trends up for multiple days.
+- **Learning loop:** archive winners/losers by hook, archetype, and offer type to guide next production sprint.
+
+## SKU Packaging QA Checklist (Pre-Publish)
+- [ ] ZIP contains all 5 required ratio files + `PRINT_ME_FIRST.pdf`.
+- [ ] File names match naming convention and are human-readable.
+- [ ] Files open correctly on desktop and mobile extraction workflow.
+- [ ] Size/ratio chart matches actual included files.
+- [ ] Digital-only + personal-use language is present in guide and product page.
+- [ ] At least one internal print test or visual QA pass completed for readability/quality.
+
+## Support SLA & Escalation
+- **First response target:** respond to download/print issues within 1 business day.
+- **Resolution order:** help identify correct file → provide corrected/repacked file if needed → refund only if unresolved.
+- **Resend policy:** provide re-download support for access issues.
+- **Escalation trigger:** repeated issue pattern across orders triggers immediate asset/guide revision.
+
+## Compliance Placement Rules
+- **Must appear on product page:** “Digital download only (no physical item shipped).”
+- **Must appear in product page + guide:** personal-use license summary.
+- **Must appear in support/refund policy:** fix-first digital issue handling and unresolved-issue refund path.
+- **Regional note (future):** if EU/UK scale grows, add explicit digital-delivery consent/withdrawal language where required.
+
+## Analytics Event Map (Minimum)
+- **Funnel events:** Product View → Add to Cart → Checkout Started → Purchase.
+- **Offer diagnostics:** track conversion by SKU type (Single vs Trio vs Weekend Kit).
+- **Creative diagnostics:** track CTR/CPC/CPA by hook and archetype.
+- **Support diagnostics:** categorize tickets (download issue, sizing confusion, print quality, licensing confusion).
+
+## Expansion Trigger Table
+- **Enable Weekend Kit:** after Singles/Trio show stable conversion and manageable support load.
+- **Enable Personalization:** after response-time SLA is consistently met and revision workflow is stable.
+- **Enable POD Variant:** after at least one digital winner proves sustained demand and margin headroom.
+
