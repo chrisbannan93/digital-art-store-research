@@ -153,3 +153,9 @@
 - No heavy CRO multivariate testing beyond 3 launch A/B tests.
 - No aggressive urgency/discounter UI patterns.
 - No AI-generated room backgrounds in v1 mockups.
+
+## AMBIGUITIES
+- **Ambiguity:** Product architecture for Single vs Trio on Shopify (variant model vs separate products).
+  - **Option A:** Single PDP with variants (`Single`, `Trio Kit`) using choose-your-set variant selector.
+  - **Option B:** Separate product records for Singles and Trio with cross-sell links between them.
+  - **Recommendation:** Start with **Option B** for launch scaffolding (clear SKU-level asset/package ownership and simpler product operations), while keeping section logic compatible with Option A later.

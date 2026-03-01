@@ -1,0 +1,72 @@
+{% liquid
+  assign offer_mode = section.settings.offer_mode
+  if offer_mode == 'auto'
+    if product.tags contains 'trio'
+      assign offer_mode = 'trio'
+    else
+      assign offer_mode = 'single'
+    endif
+  endif
+  assign display_for = section.settings.display_for
+  assign should_render = false
+  if display_for == 'all' or display_for == offer_mode
+    assign should_render = true
+  endif
+%}
+
+{% if should_render %}
+<section class="pdp-size-ratio-chart" data-offer-mode="{{ offer_mode }}">
+  <h2>{{ section.settings.heading }}</h2>
+  <p>{{ section.settings.ratio_intro }}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>{{ section.settings.col_ratio }}</th>
+        <th>{{ section.settings.col_sizes }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for block in section.blocks %}
+        <tr {{ block.shopify_attributes }}>
+          <td>{{ block.settings.ratio }}</td>
+          <td>{{ block.settings.sizes }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "PDP Size Ratio Chart",
+  "settings": [
+    { "type": "select", "id": "offer_mode", "label": "Offer mode", "default": "auto", "options": [
+      { "value": "auto", "label": "Auto" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "select", "id": "display_for", "label": "Display for", "default": "all", "options": [
+      { "value": "all", "label": "All" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Size and ratio chart" },
+    { "type": "text", "id": "ratio_intro", "label": "Intro", "default": "{{RATIO_LIST}}" },
+    { "type": "text", "id": "col_ratio", "label": "Ratio column label", "default": "Ratio" },
+    { "type": "text", "id": "col_sizes", "label": "Sizes column label", "default": "Common print sizes" }
+  ],
+  "blocks": [
+    {
+      "type": "ratio_row",
+      "name": "Ratio row",
+      "settings": [
+        { "type": "text", "id": "ratio", "label": "Ratio", "default": "{{RATIO}}" },
+        { "type": "text", "id": "sizes", "label": "Sizes", "default": "{{COMMON_SIZES}}" }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [{ "name": "PDP Size Ratio Chart" }]
+}
+{% endschema %}

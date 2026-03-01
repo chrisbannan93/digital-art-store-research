@@ -1,0 +1,69 @@
+{% liquid
+  assign offer_mode = section.settings.offer_mode
+  if offer_mode == 'auto'
+    if product.tags contains 'trio'
+      assign offer_mode = 'trio'
+    else
+      assign offer_mode = 'single'
+    endif
+  endif
+  assign display_for = section.settings.display_for
+  assign should_render = false
+  if display_for == 'all' or display_for == offer_mode
+    assign should_render = true
+  endif
+%}
+
+{% if should_render %}
+<section class="pdp-support-guarantee" data-offer-mode="{{ offer_mode }}" data-placement="{{ section.settings.placement }}">
+  <h2>{{ section.settings.heading }}</h2>
+  <p>{{ section.settings.summary }}</p>
+  <ol>
+    <li>{{ section.settings.step_1 }}</li>
+    <li>{{ section.settings.step_2 }}</li>
+    <li>{{ section.settings.step_3 }}</li>
+  </ol>
+  <p>{{ section.settings.support_sla }}</p>
+  <p>{{ section.settings.support_contact }}</p>
+  <p>{{ section.settings.digital_delivery_line }}</p>
+  <p>
+    <a href="{{ section.settings.support_policy_link }}">{{ section.settings.support_policy_label }}</a>
+    <a href="{{ section.settings.refund_policy_link }}">{{ section.settings.refund_policy_label }}</a>
+  </p>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "PDP Support Guarantee",
+  "settings": [
+    { "type": "select", "id": "offer_mode", "label": "Offer mode", "default": "auto", "options": [
+      { "value": "auto", "label": "Auto" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "select", "id": "display_for", "label": "Display for", "default": "all", "options": [
+      { "value": "all", "label": "All" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "select", "id": "placement", "label": "Placement note", "default": "lower-pdp", "options": [
+      { "value": "near-cta", "label": "Near CTA" },
+      { "value": "lower-pdp", "label": "Lower PDP" }
+    ]},
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Support-first guarantee" },
+    { "type": "textarea", "id": "summary", "label": "Summary", "default": "If something isn’t working, we’ll help step by step." },
+    { "type": "text", "id": "step_1", "label": "Step 1", "default": "Troubleshoot your issue with you" },
+    { "type": "text", "id": "step_2", "label": "Step 2", "default": "Resolve with corrected guidance/files when possible" },
+    { "type": "text", "id": "step_3", "label": "Step 3", "default": "Refund if unresolved within {{REFUND_WINDOW}}" },
+    { "type": "text", "id": "support_sla", "label": "Support SLA", "default": "Support replies within {{SUPPORT_SLA}}" },
+    { "type": "text", "id": "support_contact", "label": "Support contact", "default": "{{SUPPORT_CONTACT}}" },
+    { "type": "text", "id": "digital_delivery_line", "label": "Digital delivery line", "default": "Digital download only. No physical item is shipped." },
+    { "type": "url", "id": "support_policy_link", "label": "Support policy link" },
+    { "type": "text", "id": "support_policy_label", "label": "Support policy label", "default": "Support policy" },
+    { "type": "url", "id": "refund_policy_link", "label": "Refund policy link" },
+    { "type": "text", "id": "refund_policy_label", "label": "Refund policy label", "default": "Refund conditions" }
+  ],
+  "presets": [{ "name": "PDP Support Guarantee" }]
+}
+{% endschema %}

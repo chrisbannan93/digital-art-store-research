@@ -1,0 +1,66 @@
+{% liquid
+  assign offer_mode = section.settings.offer_mode
+  if offer_mode == 'auto'
+    if product.tags contains 'trio'
+      assign offer_mode = 'trio'
+    else
+      assign offer_mode = 'single'
+    endif
+  endif
+  assign display_for = section.settings.display_for
+  assign should_render = false
+  if display_for == 'all' or display_for == offer_mode
+    assign should_render = true
+  endif
+%}
+
+{% if should_render %}
+<section class="pdp-license" data-offer-mode="{{ offer_mode }}">
+  <h2>{{ section.settings.heading }}</h2>
+  <p>{{ section.settings.personal_use_line }}</p>
+  <h3>{{ section.settings.allowed_heading }}</h3>
+  <ul>
+    <li>{{ section.settings.allowed_1 }}</li>
+    <li>{{ section.settings.allowed_2 }}</li>
+    <li>{{ section.settings.allowed_3 }}</li>
+  </ul>
+  <h3>{{ section.settings.not_allowed_heading }}</h3>
+  <ul>
+    <li>{{ section.settings.not_allowed_1 }}</li>
+    <li>{{ section.settings.not_allowed_2 }}</li>
+    <li>{{ section.settings.not_allowed_3 }}</li>
+  </ul>
+  <a href="{{ section.settings.license_policy_link }}">{{ section.settings.license_policy_label }}</a>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "PDP License",
+  "settings": [
+    { "type": "select", "id": "offer_mode", "label": "Offer mode", "default": "auto", "options": [
+      { "value": "auto", "label": "Auto" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "select", "id": "display_for", "label": "Display for", "default": "all", "options": [
+      { "value": "all", "label": "All" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "text", "id": "heading", "label": "Heading", "default": "License summary" },
+    { "type": "text", "id": "personal_use_line", "label": "Personal-use line", "default": "Personal Use Only" },
+    { "type": "text", "id": "allowed_heading", "label": "Allowed heading", "default": "You may" },
+    { "type": "text", "id": "allowed_1", "label": "Allowed 1", "default": "Print for your own home" },
+    { "type": "text", "id": "allowed_2", "label": "Allowed 2", "default": "Reprint for personal use as needed" },
+    { "type": "text", "id": "allowed_3", "label": "Allowed 3", "default": "Gift a finished physical print only if gifting is enabled for this SKU" },
+    { "type": "text", "id": "not_allowed_heading", "label": "Not allowed heading", "default": "You may not" },
+    { "type": "text", "id": "not_allowed_1", "label": "Not allowed 1", "default": "Resell files or printed copies" },
+    { "type": "text", "id": "not_allowed_2", "label": "Not allowed 2", "default": "Share, upload, or redistribute files" },
+    { "type": "text", "id": "not_allowed_3", "label": "Not allowed 3", "default": "Use designs for business, branding, or commercial projects" },
+    { "type": "url", "id": "license_policy_link", "label": "License policy link" },
+    { "type": "text", "id": "license_policy_label", "label": "License policy link label", "default": "Read full personal use license" }
+  ],
+  "presets": [{ "name": "PDP License" }]
+}
+{% endschema %}

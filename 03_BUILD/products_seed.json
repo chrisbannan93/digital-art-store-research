@@ -1,0 +1,93 @@
+[
+  {
+    "sku_code": "NUR-SGL-001",
+    "handle": "style-subject-nursery-print-001",
+    "title": "{{STYLE}} Nursery Print — {{SUBJECT}} (Printable Wall Art)",
+    "product_type": "Nursery Printable Wall Art",
+    "tags": [
+      "nursery",
+      "printable",
+      "digital-download",
+      "single",
+      "starter",
+      "300-dpi",
+      "5-ratios",
+      "beginner-friendly",
+      "personal-use-only"
+    ],
+    "status": "draft",
+    "template_suffix": "pdp-single",
+    "metafields": {
+      "custom.theme": "{{THEME}}",
+      "custom.palette_family": "{{PALETTE_FAMILY}}",
+      "custom.archetype": "Calm Minimal",
+      "custom.includes_summary": "1 print • 1 ZIP package • 5 ratio files • PRINT_ME_FIRST.pdf",
+      "custom.license_summary": "Personal Use Only"
+    },
+    "price": "12.00",
+    "compare_at_price": null,
+    "currency": "AUD",
+    "description_html": "<p>Create a calm, cohesive nursery corner in minutes with {{STYLE_LOWER}} artwork designed to work beautifully in everyday family spaces. You’ll receive clear files, simple print guidance, and friendly support if you need a hand.</p><ul><li>1 printable art design: {{SUBJECT}}</li><li>1 ZIP folder with all included files</li><li>5 print ratios: 2:3, 3:4, 4:5, 11:14, ISO (A-series)</li><li>PRINT_ME_FIRST.pdf included</li><li>Digital download only. No physical item is shipped.</li></ul><p>Download -&gt; Print -&gt; Frame</p>"
+  },
+  {
+    "sku_code": "NUR-SGL-002",
+    "handle": "style-subject-nursery-print-002",
+    "title": "{{STYLE}} Nursery Print — {{SUBJECT}} (Printable Wall Art)",
+    "product_type": "Nursery Printable Wall Art",
+    "tags": [
+      "nursery",
+      "printable",
+      "digital-download",
+      "single",
+      "starter",
+      "300-dpi",
+      "5-ratios",
+      "beginner-friendly",
+      "personal-use-only"
+    ],
+    "status": "draft",
+    "template_suffix": "pdp-single",
+    "metafields": {
+      "custom.theme": "{{THEME}}",
+      "custom.palette_family": "{{PALETTE_FAMILY}}",
+      "custom.archetype": "Whimsical Storybook",
+      "custom.includes_summary": "1 print • 1 ZIP package • 5 ratio files • PRINT_ME_FIRST.pdf",
+      "custom.license_summary": "Personal Use Only"
+    },
+    "price": "12.00",
+    "compare_at_price": null,
+    "currency": "AUD",
+    "description_html": "<p>Create a calm, cohesive nursery corner in minutes with {{STYLE_LOWER}} artwork designed to work beautifully in everyday family spaces. You’ll receive clear files, simple print guidance, and friendly support if you need a hand.</p><ul><li>1 printable art design: {{SUBJECT}}</li><li>1 ZIP folder with all included files</li><li>5 print ratios: 2:3, 3:4, 4:5, 11:14, ISO (A-series)</li><li>PRINT_ME_FIRST.pdf included</li><li>Digital download only. No physical item is shipped.</li></ul><p>Download -&gt; Print -&gt; Frame</p>"
+  },
+  {
+    "sku_code": "NUR-TRI-001",
+    "handle": "style-collection-nursery-trio-kit-001",
+    "title": "{{STYLE}} Nursery Trio Kit — {{COLLECTION}} (3 Coordinated Prints)",
+    "product_type": "Nursery Printable Wall Art",
+    "tags": [
+      "nursery",
+      "printable",
+      "digital-download",
+      "trio-kit",
+      "most-popular",
+      "best-value",
+      "300-dpi",
+      "5-ratios",
+      "beginner-friendly",
+      "personal-use-only"
+    ],
+    "status": "draft",
+    "template_suffix": "pdp-trio",
+    "metafields": {
+      "custom.theme": "{{THEME}}",
+      "custom.palette_family": "{{PALETTE_FAMILY}}",
+      "custom.archetype": "Calm Minimal + Whimsical Storybook",
+      "custom.includes_summary": "3 coordinated prints • layout suggestion • 1 ZIP package • 5 ratio files per print • PRINT_ME_FIRST.pdf",
+      "custom.license_summary": "Personal Use Only"
+    },
+    "price": "29.00",
+    "compare_at_price": null,
+    "currency": "AUD",
+    "description_html": "<p>Create a calm, cohesive nursery corner in minutes with {{STYLE_LOWER}} artwork designed to work beautifully in everyday family spaces. You’ll receive clear files, simple print guidance, and friendly support if you need a hand.</p><ul><li>3 coordinated printable art designs: {{COLLECTION}}</li><li>1 ZIP folder with all included files</li><li>5 print ratios for each print: 2:3, 3:4, 4:5, 11:14, ISO (A-series)</li><li>Layout suggestion guide included</li><li>PRINT_ME_FIRST.pdf included</li><li>Digital download only. No physical item is shipped.</li></ul><p>Curated set + layout included</p><p>Save $7 vs buying singles.</p><p>Download -&gt; Print -&gt; Frame</p>"
+  }
+]

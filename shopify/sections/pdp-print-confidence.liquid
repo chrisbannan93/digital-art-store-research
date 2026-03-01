@@ -1,0 +1,53 @@
+{% liquid
+  assign offer_mode = section.settings.offer_mode
+  if offer_mode == 'auto'
+    if product.tags contains 'trio'
+      assign offer_mode = 'trio'
+    else
+      assign offer_mode = 'single'
+    endif
+  endif
+  assign display_for = section.settings.display_for
+  assign should_render = false
+  if display_for == 'all' or display_for == offer_mode
+    assign should_render = true
+  endif
+%}
+
+{% if should_render %}
+<section class="pdp-print-confidence" data-offer-mode="{{ offer_mode }}">
+  <h2>{{ section.settings.heading }}</h2>
+  <p>{{ section.settings.print_me_first_text }}</p>
+  <ul>
+    <li>{{ section.settings.print_path_1 }}</li>
+    <li>{{ section.settings.print_path_2 }}</li>
+    <li>{{ section.settings.print_path_3 }}</li>
+  </ul>
+  <p>{{ section.settings.support_line }}</p>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "PDP Print Confidence",
+  "settings": [
+    { "type": "select", "id": "offer_mode", "label": "Offer mode", "default": "auto", "options": [
+      { "value": "auto", "label": "Auto" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "select", "id": "display_for", "label": "Display for", "default": "all", "options": [
+      { "value": "all", "label": "All" },
+      { "value": "single", "label": "Single" },
+      { "value": "trio", "label": "Trio" }
+    ]},
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Print confidence" },
+    { "type": "textarea", "id": "print_me_first_text", "label": "PRINT_ME_FIRST text", "default": "PRINT_ME_FIRST.pdf is included so you can run a quick test before printing full size. It helps you confirm scale, color feel, and paper choice with less guesswork." },
+    { "type": "text", "id": "print_path_1", "label": "Print path option 1", "default": "{{PRINT_PATH_OPTION_1}}" },
+    { "type": "text", "id": "print_path_2", "label": "Print path option 2", "default": "{{PRINT_PATH_OPTION_2}}" },
+    { "type": "text", "id": "print_path_3", "label": "Print path option 3", "default": "{{PRINT_PATH_OPTION_3}}" },
+    { "type": "text", "id": "support_line", "label": "Support line", "default": "Need help? Send us your setup details and we’ll guide you through the best print path for your space." }
+  ],
+  "presets": [{ "name": "PDP Print Confidence" }]
+}
+{% endschema %}
